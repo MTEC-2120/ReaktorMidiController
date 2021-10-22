@@ -16,6 +16,13 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
     float scale = Mathf.Pow(2f, 1.0f / 12f);
     //bool needtoplay = true;
 
+    public delegate void PianoKeyDown(int note);
+    public static event PianoKeyDown OnPianoKeyDown;
+
+
+    public delegate void PianoKeyUp(int note);
+    public static event PianoKeyUp OnPianoKeyUp;
+
     void Start()
     {
         clip = pitcher.clip;
@@ -26,6 +33,8 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
     {
         PlayNote();
         GetComponent<Animator>().SetBool("down", true);
+
+        if (OnPianoKeyDown != null) OnPianoKeyDown(tone);
     }
     public void OnPointerUp(PointerEventData eventData)  //what happens when the key gets unpressed
     {
@@ -34,6 +43,8 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
         {
             StartCoroutine(SoundFade(curr));
         }
+
+        if (OnPianoKeyUp != null) OnPianoKeyUp(tone);
     }
     /*public void OnPointerEnter(PointerEventData eventData) some badly working stuff
     {
@@ -62,6 +73,7 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
         curr.pitch = Mathf.Pow(scale, tone);
         curr.clip = clip[pitcher.octaveOffset + octave - 1];
         curr.Play();
+
     }
     public IEnumerator SoundFade(AudioSource source) //sound fade after the button gets unpressed
     {
