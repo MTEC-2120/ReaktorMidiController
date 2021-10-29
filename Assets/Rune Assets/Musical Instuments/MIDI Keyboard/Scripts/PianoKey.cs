@@ -78,7 +78,7 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
     public IEnumerator SoundFade(AudioSource source) //sound fade after the button gets unpressed
     {
 
-        Debug.Log("SoundFade :  " + gameObject.name);
+        //Debug.Log("SoundFade :  " + gameObject.name);
         float progress = 0;
         while (progress < 1)
         {
