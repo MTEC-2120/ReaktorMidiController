@@ -4,4 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_FlapUp/Scenes/CharacterSelection.unity
+    guid: 2ef288e170f015e4b8fc423794098d6b
+  - enabled: 1
+    path: Assets/_FlapUp/Scenes/Main.unity
+    guid: 79ea7c2bb94c3f64ba54f71784e19924
+  m_configObjects: {}

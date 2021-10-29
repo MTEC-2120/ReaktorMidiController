@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &104526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 451648}
+  - component: {fileID: 114867345775299642}
+  - component: {fileID: 11416178}
+  - component: {fileID: 11480196}
+  - component: {fileID: 11468440}
+  - component: {fileID: 11459406}
+  - component: {fileID: 11441840}
+  - component: {fileID: 114131137051100516}
+  - component: {fileID: 11461624}
+  m_Layer: 0
+  m_Name: PremiumFeaturesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451648
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11416178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf4a2538c64745739e9bde27352b463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showBannerAd: 1
+  bannerAdPosition: 1
+  showInterstitialAd: 1
+  gamesPerInterstitial: 3
+  showInterstitialDelay: 5
+  watchAdToEarnCoins: 1
+  rewardedCoins: 50
+  watchAdToRevive: 1
+--- !u!114 &11441840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b09fb089ace462f97d934784390a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableSharing: 0
+  sharedImageFormat: 2
+  shareMessage: Awesome! I've just scored [score] in [AppName]! [#AppName]
+  gifFilename: animated_screenshot
+  pngFilename: screenshot
+  gifAutoHeight: 1
+  gifWidth: 256
+  gifHeight: 480
+  gifFps: 15
+  gifLength: 3
+  gifLoop: 0
+  gifQuality: 80
+  gifThreadPriority: 1
+  giphyUsername: 
+  giphyApiKey: 
+  giphyUploadTags: unity, mobile, game
+--- !u!114 &11459406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0350242eae7d436cbc1dbc271373b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disable: 0
+  achievements:
+  - achievementName: Score_10
+    scoreToUnlock: 10
+  - achievementName: Score_20
+    scoreToUnlock: 20
+  - achievementName: Score_30
+    scoreToUnlock: 30
+  - achievementName: Score_40
+    scoreToUnlock: 40
+  - achievementName: Score_50
+    scoreToUnlock: 50
+  - achievementName: Score_60
+    scoreToUnlock: 60
+  - achievementName: Score_70
+    scoreToUnlock: 70
+  - achievementName: Score_80
+    scoreToUnlock: 80
+  - achievementName: Score_90
+    scoreToUnlock: 90
+  - achievementName: Score_100
+    scoreToUnlock: 100
+--- !u!114 &11461624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7583989556ae242e389c2ba307c25a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Exit Game
+  message: Are you sure you want to exit?
+  yesButton: Yes
+  noButton: No
+--- !u!114 &11468440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbe9fd9e217e4be8b7f0593f9d77052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disable: 0
+  leaderboardName: Score
+--- !u!114 &11480196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47830b8d66c74670b0edccbd3721389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeAds: Remove_Ads
+  coinPacks:
+  - productName: Coins_500
+    priceString: USD 0.99
+    coinValue: 500
+  - productName: Coins_1000
+    priceString: USD 1.99
+    coinValue: 1000
+  - productName: Coins_2000
+    priceString: USD 3.99
+    coinValue: 2000
+  - productName: Coins_4000
+    priceString: USD 7.99
+    coinValue: 4000
+  - productName: Coins_10000
+    priceString: USD 19.99
+    coinValue: 10000
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 104526}
+  m_IsPrefabParent: 1
+--- !u!114 &114131137051100516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9af8a8f01d892424c877a50eb711bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestMode: 0
+  gamesPlayedAfterInstall: 2
+  gamesPlayedBetweenRequests: 10
+  daysAfterInstall: 14
+  daysBetweenRequests: 14
+--- !u!114 &114867345775299642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c557464845c194c148a6412ef692df3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enablePremiumFeatures: 1

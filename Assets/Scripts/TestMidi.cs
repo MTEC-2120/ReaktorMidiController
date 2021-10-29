@@ -21,21 +21,21 @@ public class TestMidi : MonoBehaviour
     {
 
         // For Testing
-        //for(int notenumber=0; notenumber < 128; notenumber++)
-        //{
-        //    if(MidiDriver.Instance.GetKey(MidiChannel.All, notenumber) >0)
-        //    {
-        //        Debug.Log("Note number is " + notenumber);
-        //    }
+        for (int notenumber = 0; notenumber < 128; notenumber++)
+        {
+            if (MidiDriver.Instance.GetKey(MidiChannel.All, notenumber) > 0)
+            {
+                Debug.Log("Note number is " + notenumber);
+            }
 
-        //    if (MidiMaster.GetKeyDown(MidiChannel.All, notenumber))
-        //    {
-        //        Debug.Log("Note number is " + notenumber);
+            if (MidiMaster.GetKeyDown(MidiChannel.All, notenumber))
+            {
+                Debug.Log("Note number is " + notenumber);
 
-        //    }
+            }
 
 
-        //}
+        }
 
 
         for (int i=0; i< (pianoKeys.Length); i++)
