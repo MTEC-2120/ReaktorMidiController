@@ -6,6 +6,8 @@ public class Visualizer : MonoBehaviour
     public GameObject barPrefab;
     public GUIStyle labelStyle;
 
+    public float scaleFactor; 
+
     SpectrumBar.BarType barType;
     int barCount;
 
@@ -19,8 +21,8 @@ public class Visualizer : MonoBehaviour
     void Update()
     {
 
-        //LinearSpectrumVisualizer();
-        CircularSpectrumVisualizer();
+        LinearSpectrumVisualizer();
+        //CircularSpectrumVisualizer();
         //SquareSpectrumVisualizer(); 
 
     }
@@ -29,11 +31,25 @@ public class Visualizer : MonoBehaviour
     void SquareSpectrumVisualizer()
     {
 
+        int barCountY = 0;
 
-        if (barCount == spectrum.PeakLevels.Length)
+        int barCountX = 0;
+
+        if (barCountX == spectrum.PeakLevels.Length)
         {
             return;
         }
+
+        if (barCountY == spectrum.MeanLevels.Length)
+        {
+            return;
+        }
+
+
+        //if (barCount == spectrum.Levels.Length)
+        //{
+        //    return;
+        //}
 
         // Destroy the old bars.
         foreach (var child in transform)
@@ -42,16 +58,24 @@ public class Visualizer : MonoBehaviour
         }
 
         // Change the number of bars.
-        barCount = spectrum.PeakLevels.Length;
-        var barWidth = 6.0f / barCount;
-        var barScale = new Vector3(barWidth * 0.9f, 1, -0.75f);
+        barCountX = spectrum.PeakLevels.Length;
+        barCountY = spectrum.MeanLevels.Length;
+
+        var barWidthX = 6.0f / barCountX;
+        var barScaleX = new Vector3(barWidthX * 0.9f, 1, -0.75f);
 
 
-        int ii = (int) Mathf.Sqrt(barCount); 
+        var barWidthY = 6.0f / barCountY;
+        var barScaleY = new Vector3(barWidthY * 0.9f, 1, -0.75f);
+
+
+        //int ii = (int) Mathf.Sqrt(barCount); 
+
+
         // Create new bars.
-        for (var j = 0; j < ii; j++)
+        for (var j = 0; j < barCountX; j++)
         {
-            for (var i = 0; i < ii; i++)
+            for (var i = 0; i < barCountY; i++)
             {
                 //var x = 6.0f * i / barCount - 3.0f + barWidth / 2;
 
@@ -59,18 +83,23 @@ public class Visualizer : MonoBehaviour
                 //var posZ = 5.0f * Mathf.Sin(i * 360 / barCount);
 
 
-                var posX = 6.0f * i / ii - 3.0f + barWidth / 2;
-                var posZ = 6.0f * j / ii - 3.0f + barWidth / 2;
+                var posX = 6.0f * i / barCountX - 3.0f + barWidthX / 2;
+                var posZ = 6.0f * j / barCountY - 3.0f + barWidthY / 2;
 
 
                 Vector3 position = new Vector3(posX, 0, posZ);
                 var bar = Instantiate(barPrefab, position + 3 * Vector3.forward, transform.rotation) as GameObject;
 
-                bar.GetComponent<SpectrumBar>().index = i*ii+j;
+                bar.GetComponent<SpectrumBar>().index = j;
                 bar.GetComponent<SpectrumBar>().barType = barType;
 
+
+                var scaleX = spectrum.PeakLevels[i];
+                var scaleY = spectrum.MeanLevels[i];
+
+
                 bar.transform.parent = transform;
-                bar.transform.localScale = barScale;
+                bar.transform.localScale = (i * scaleX + j * scaleY) *Vector3.one / scaleFactor; 
             }
         }
 
