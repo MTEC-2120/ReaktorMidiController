@@ -1,5 +1,23 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "Unity NuGet",
+      "url": "https://unitynuget-registry.azurewebsites.net",
+      "scopes": [
+        "org.nuget"
+      ]
+    },
+    {
+      "name": "Keijiro",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "jp.keijiro"
+      ]
+    }
+  ],
   "dependencies": {
+    "jp.keijiro.testcards": "1.0.0",
+    "org.nuget.system.memory": "4.5.3",
     "com.unity.collab-proxy": "1.9.0",
     "com.unity.ide.rider": "2.0.7",
     "com.unity.ide.visualstudio": "2.0.11",

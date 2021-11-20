@@ -5,10 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_FlapUp/Scenes/CharacterSelection.unity
     guid: 2ef288e170f015e4b8fc423794098d6b
-  - enabled: 1
+  - enabled: 0
     path: Assets/_FlapUp/Scenes/Main.unity
     guid: 79ea7c2bb94c3f64ba54f71784e19924
+  - enabled: 0
+    path: Assets/KlakNDI/Sender.unity
+    guid: a7d90cce90b5cc74c82a707566af976a
+  - enabled: 1
+    path: Assets/KlakNDI/Receiver.unity
+    guid: 6011336c22a4d334fa9f8cc4ede967d8
+  - enabled: 0
+    path: Assets/MidiKeyboardReaktor.unity
+    guid: bde5e723a48eaf449aa71b6e1731f284
   m_configObjects: {}
