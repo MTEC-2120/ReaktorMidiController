@@ -18,6 +18,6 @@ EditorBuildSettings:
     path: Assets/KlakNDI/Receiver.unity
     guid: 6011336c22a4d334fa9f8cc4ede967d8
   - enabled: 0
-    path: Assets/MidiKeyboardReaktor.unity
+    path: Assets/Scenes/MidiKeyboardReaktor.unity
     guid: bde5e723a48eaf449aa71b6e1731f284
   m_configObjects: {}
