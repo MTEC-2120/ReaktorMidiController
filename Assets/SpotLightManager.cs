@@ -34,7 +34,7 @@ public class SpotLightManager : MonoBehaviour
         if (var < spotLights.Length)
         {
             spotLights[var].SetActive(true);
-            Color color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+            Color color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 0.5f);
             spotLights[var].GetComponentInChildren<Renderer>().material.color = color;
             spotLights[var].GetComponent<Light>().color = color;
         }
