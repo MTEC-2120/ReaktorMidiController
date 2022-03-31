@@ -16,8 +16,8 @@ public class Rocket5 : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         //Game object will turn off
-        GameObject.Find("MeshRenderer5").SetActive(false);
-
+        //GameObject.Find("MeshRenderer5").SetActive(false);
+        gameObject.transform.FindChild("MeshRenderer5").gameObject.SetActive(false);
         rig.isKinematic = true;
         cf.enabled = false;
 
