@@ -595,6 +595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Standing 2H Magic Area Attack 01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0f471f21c4250c4fae4ad1b9f945122,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1092408308860062549, guid: c0f471f21c4250c4fae4ad1b9f945122,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1329,6 +1334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15415486aa19e5e4e8a186c46e48eacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spray: {fileID: 0}
+  throttle: 0.5
 --- !u!1 &1667979371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2000374980
 MonoBehaviour:
   m_ObjectHideFlags: 0
