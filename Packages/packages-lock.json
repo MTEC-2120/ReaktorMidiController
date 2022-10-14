@@ -164,14 +164,6 @@
       },
       "url": "https://registry.npmjs.com"
     },
-    "jp.keijiro.klak.ndi": {
-      "version": "file:jp.keijiro.klak.ndi",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {
-        "com.unity.modules.screencapture": "1.0.0"
-      }
-    },
     "jp.keijiro.neolowman": {
       "version": "1.0.0",
       "depth": 0,
